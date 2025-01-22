@@ -1,15 +1,18 @@
 class FlatIterator:
 
     def __init__(self, list_of_list):
+        """Список атрибутов класса"""
         self.list_of_list = list_of_list
 
     def __iter__(self):
+        """Список атрибутов для итерации по текущему списку"""
         self.list_iterator = iter(self.list_of_list)
         self.new_list = []
         self.current_position = -1
         return self
 
     def __next__(self):
+        """Функция для определения следующего элемента в списке списков, возвращает этот элемент"""
         self.current_position += 1
         if len(self.new_list) == self.current_position:
             self.new_list = None

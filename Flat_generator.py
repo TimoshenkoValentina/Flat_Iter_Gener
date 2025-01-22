@@ -2,6 +2,7 @@ import types
 
 
 def flat_generator(list_of_lists):
+    """Функция возвращает элементы из списка списков"""
     for current_list in list_of_lists:
         for element in current_list:
             yield element
